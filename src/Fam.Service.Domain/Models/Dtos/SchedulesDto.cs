@@ -8,5 +8,6 @@ namespace Fam.Service.Domain.Models
         public string Description { get; set; }
         public DateTime SheduleStart { get;set;}
         public DateTime SheduleEnd { get; set; }
+        public int Absences { get; set; }
     }
 }

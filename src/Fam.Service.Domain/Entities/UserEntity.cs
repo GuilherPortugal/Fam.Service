@@ -7,6 +7,6 @@ namespace Fam.Service.Domain.Entities
         public string Login { get; set; }
         public string Password { get; set; }
         public int Permissions { get; set; }
-
+        public string Email { get; set; }
     }
 }

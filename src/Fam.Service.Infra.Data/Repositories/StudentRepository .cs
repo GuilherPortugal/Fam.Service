@@ -42,10 +42,14 @@ namespace Fam.Service.Repository
                 var schedulesSql = $@"select b.id, 
                                              b.description, 
                                              b.sheduleStart, 
-                                             b.sheduleEnd
+                                             b.sheduleEnd,
+                                             c.NumberAbsences as Absences
                                         from classSchedules a
                                        inner join Schedules b
                                           on b.id = a.SheduleId
+                                        left join Absences C
+                                          on  C.SheduleId = a.id
+                                         and  C.studentId = '{student.Id}'
                                        WHERE a.classId = '{student.ClassId}'";
 
 

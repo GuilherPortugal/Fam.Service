@@ -16,6 +16,8 @@ namespace Fam.Service.Context
         public DbSet<TeachersClassEntity> TeacherClass { get; set; }
         public DbSet<StudentsEntity> Students { get; set; }
         public DbSet<Course> Courses { get; set; }
+        public DbSet<Absences> Absences { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
 
         {
